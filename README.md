@@ -16,7 +16,19 @@ npm install
 npm run dev
 ```
 
-Open **http://localhost:5173**. To build for production:
+Open **http://localhost:5173**.
+
+## Deploy on Vercel
+
+From the **shoevera** directory:
+
+```bash
+npx vercel
+```
+
+Or connect your Git repo in the [Vercel dashboard](https://vercel.com/new): import the repo, set **Root Directory** to `shoevera`, then deploy. Vercel will detect Vite and use `npm run build` with output `dist`.
+
+To build for production locally:
 
 ```bash
 npm run build
