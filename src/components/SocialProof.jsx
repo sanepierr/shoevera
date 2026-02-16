@@ -2,15 +2,15 @@ export default function SocialProof() {
   const testimonials = [
     {
       quote: "I don't worry about mud on the way to campus anymore. I just slip on Shoevera and my shoes stay clean.",
-      author: '— Student, Kampala',
+      author: '— Gareth, UCU Student',
     },
     {
       quote: "As a boda rider, I need something quick. Shoevera goes on and off in seconds. Worth every shilling.",
-      author: '— Boda boda rider',
+      author: '— Bodaboda rider',
     },
     {
       quote: "Office shoes used to get ruined every rainy season. Now I wear Shoevera to the office gate and take it off. Simple.",
-      author: '— Office worker',
+      author: '— Isa, Body Tech Gym Instructor',
     },
   ]
   return (
