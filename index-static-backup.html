@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shoevera – Reusable footwear covers that protect your shoes from rain, mud, and dirty walkways. Lightweight, affordable, durable. Order now.">
+  <title>Shoevera – Protect Your Shoes This Rainy Season</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #faf9f6;
+      --color-surface: #ffffff;
+      --color-primary: #0d5c2e;
+      --color-primary-dark: #084420;
+      --color-accent: #e8f5e9;
+      --color-text: #1a1a1a;
+      --color-text-muted: #5a5a5a;
+      --color-border: #e5e5e0;
+      --color-cta: #0d5c2e;
+      --color-cta-hover: #084420;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; margin: 0; }
+    h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.2; }
+    h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+    h3 { font-size: 1.125rem; }
+
+    a { color: var(--color-primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary {
+      background: var(--color-cta);
+      color: #fff;
+      box-shadow: var(--shadow-md);
+    }
+    .btn-primary:hover {
+      background: var(--color-cta-hover);
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(13, 92, 46, 0.35);
+    }
+    .btn-secondary {
+      background: var(--color-surface);
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+    }
+    .btn-secondary:hover {
+      background: var(--color-accent);
+      text-decoration: none;
+    }
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff;
+    }
+    .btn-whatsapp:hover {
+      background: #20bd5a;
+      text-decoration: none;
+    }
+
+    /* Section spacing */
+    section {
+      padding: 3rem 0;
+    }
+    section.alt { background: var(--color-surface); }
+
+    /* ========== HERO ========== */
+    .hero {
+      padding: 2rem 0 3rem;
+      text-align: center;
+      background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-bg) 70%);
+    }
+    .hero .container { padding-top: 0.5rem; }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      background: rgba(13, 92, 46, 0.12);
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      color: var(--color-text);
+      margin-bottom: 0.75rem;
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      max-width: 520px;
+      margin: 0 auto 1.75rem;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .hero-visual {
+      max-width: 340px;
+      margin: 0 auto;
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+    .hero-visual img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      display: block;
+    }
+    .hero-placeholder {
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #e0e8e2 0%, #c8d8cc 100%);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* ========== PROBLEM ========== */
+    .problem h2 { text-align: center; margin-bottom: 0.5rem; }
+    .problem-intro {
+      text-align: center;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .problem-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+    }
+    .problem-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background: #fef2f2;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .problem-card h3 { margin-bottom: 0.25rem; }
+    .problem-card p { margin: 0; font-size: 0.95rem; color: var(--color-text-muted); }
+
+    /* ========== SOLUTION ========== */
+    .solution h2 { text-align: center; margin-bottom: 0.5rem; }
+    .solution-intro {
+      text-align: center;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .solution-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+    }
+    .step-num {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .step h3 { margin-bottom: 0.25rem; }
+    .step p { margin: 0; font-size: 0.95rem; color: var(--color-text-muted); }
+
+    /* ========== BENEFITS ========== */
+    .benefits h2 { text-align: center; margin-bottom: 0.5rem; }
+    .benefits-intro {
+      text-align: center;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .benefit-card {
+      padding: 1.25rem;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      text-align: center;
+    }
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 0.75rem;
+      background: var(--color-accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .benefit-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+    .benefit-card p { margin: 0; font-size: 0.85rem; color: var(--color-text-muted); }
+
+    /* ========== PRODUCT SHOWCASE ========== */
+    .showcase h2 { text-align: center; margin-bottom: 0.5rem; }
+    .showcase-intro {
+      text-align: center;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .showcase-main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .showcase-image {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+    .showcase-image .img-placeholder {
+      aspect-ratio: 1;
+      background: linear-gradient(145deg, #e8f0ea 0%, #d0e0d4 100%);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+    .showcase-details h3 { margin-bottom: 0.75rem; }
+    .showcase-details p { color: var(--color-text-muted); margin-bottom: 1rem; }
+    .showcase-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+    .showcase-price span { font-size: 0.9rem; font-weight: 500; color: var(--color-text-muted); }
+
+    /* ========== SOCIAL PROOF ========== */
+    .social-proof h2 { text-align: center; margin-bottom: 0.5rem; }
+    .social-proof-tagline {
+      text-align: center;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .testimonials {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .testimonial {
+      padding: 1.25rem;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+    }
+    .testimonial-quote { font-size: 0.95rem; margin-bottom: 0.75rem; font-style: italic; color: var(--color-text); }
+    .testimonial-author { font-size: 0.85rem; font-weight: 600; color: var(--color-primary); }
+    .testimonial-role { font-size: 0.8rem; color: var(--color-text-muted); }
+
+    /* ========== HOW TO BUY ========== */
+    .how-to-buy h2 { text-align: center; margin-bottom: 0.5rem; }
+    .how-to-buy-intro {
+      text-align: center;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .buy-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .buy-step {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+    }
+    .buy-step-num {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .buy-step p { margin: 0; font-weight: 500; }
+    .how-to-buy .cta-wrap { text-align: center; }
+
+    /* ========== CTA SECTION ========== */
+    .cta-section {
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: #fff;
+    }
+    .cta-section h2 { color: #fff; margin-bottom: 0.5rem; }
+    .cta-section p { margin: 0 0 1.5rem; opacity: 0.95; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-section .btn-whatsapp {
+      background: #fff;
+      color: var(--color-primary);
+    }
+    .cta-section .btn-whatsapp:hover {
+      background: var(--color-accent);
+      color: var(--color-primary-dark);
+    }
+
+    /* ========== FAQ ========== */
+    .faq h2 { text-align: center; margin-bottom: 0.5rem; }
+    .faq-intro {
+      text-align: center;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .faq-list {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq-item:first-child { padding-top: 0; }
+    .faq-q { font-weight: 600; margin-bottom: 0.35rem; }
+    .faq-a { font-size: 0.95rem; color: var(--color-text-muted); margin: 0; }
+
+    /* ========== FOOTER ========== */
+    footer {
+      padding: 2rem 0;
+      background: var(--color-text);
+      color: #b0b0b0;
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .footer-links a {
+      color: #b0b0b0;
+    }
+    .footer-links a:hover { color: #fff; text-decoration: none; }
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .footer-social a:hover { background: var(--color-primary); text-decoration: none; }
+    .footer-copy { font-size: 0.85rem; margin: 0; }
+
+    /* Responsive */
+    @media (min-width: 600px) {
+      .problem-grid { grid-template-columns: 1fr 1fr; }
+      .benefits-grid { grid-template-columns: repeat(3, 1fr); }
+      .showcase-main { grid-template-columns: 1fr 1fr; }
+      .testimonials { grid-template-columns: 1fr 1fr; }
+      .buy-steps { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    @media (min-width: 900px) {
+      .problem-grid { grid-template-columns: repeat(3, 1fr); }
+      .solution-steps { grid-template-columns: repeat(3, 1fr); }
+      .benefits-grid { grid-template-columns: repeat(5, 1fr); }
+      .testimonials { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-badge">Reusable • Durable • Affordable</span>
+      <h1>Protect Your Shoes This Rainy Season</h1>
+      <p class="hero-sub">Shoevera is a reusable footwear cover you slip over your shoes—so rain, mud, and dirty walkways never ruin your favourite pair again.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/256XXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20Shoevera" class="btn btn-primary btn-whatsapp" target="_blank" rel="noopener">Buy Shoevera Now</a>
+        <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-placeholder">[Hero image: Shoevera in use on rainy/muddy path]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROBLEM -->
+  <section class="problem alt" id="problem">
+    <div class="container">
+      <h2>Sound Familiar?</h2>
+      <p class="problem-intro">Rainy season and muddy roads make it tough to keep your shoes clean—and replacing them is expensive.</p>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">👟</div>
+          <div>
+            <h3>Dirty or damaged shoes</h3>
+            <p>One walk in the rain and your office or school shoes are soaked and stained.</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🌧️</div>
+          <div>
+            <h3>Muddy roads & flooded paths</h3>
+            <p>Urban and peri-urban areas get waterlogged—your shoes take the hit every time.</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🥾</div>
+          <div>
+            <h3>Gumboots or extra shoes?</h3>
+            <p>Heavy, bulky, or awkward to carry. You need something simple and light.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SOLUTION -->
+  <section class="solution" id="how-it-works">
+    <div class="container">
+      <h2>Meet Shoevera</h2>
+      <p class="solution-intro">A lightweight cover you wear over your existing shoes. Slip it on when it rains or the path is dirty—take it off when you’re inside. That’s it.</p>
+      <div class="solution-steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <div>
+            <h3>Slip on</h3>
+            <p>Pull Shoevera over your shoes before you step into rain or mud. Fits different shoe types.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div>
+            <h3>Walk with confidence</h3>
+            <p>Your shoes stay dry and clean. Easy to walk in—no bulk, no hassle.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div>
+            <h3>Remove & reuse</h3>
+            <p>Take them off when you’re inside. Wipe or rinse, pack away, use again next time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. KEY BENEFITS -->
+  <section class="benefits alt">
+    <div class="container">
+      <h2>Why Shoevera?</h2>
+      <p class="benefits-intro">Built for students, office workers, traders, boda boda riders, and daily commuters who need practical, affordable protection.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🌧️</div>
+          <h3>Waterproof</h3>
+          <p>Keeps feet and shoes dry in rain and puddles.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>Cost-effective</h3>
+          <p>One pair lasts. No need to replace ruined shoes.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>Easy wear & carry</h3>
+          <p>Quick to put on, remove, and pack away.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">♻️</div>
+          <h3>Reusable & durable</h3>
+          <p>Wash and reuse. Made to last the season.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">👞</div>
+          <h3>Fits many shoes</h3>
+          <p>Works with school, office, and casual shoes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PRODUCT SHOWCASE -->
+  <section class="showcase">
+    <div class="container">
+      <h2>Built for Everyday Use</h2>
+      <p class="showcase-intro">Lightweight, durable materials and a simple design—so you can focus on your day, not on your shoes.</p>
+      <div class="showcase-main">
+        <div class="showcase-image">
+          <div class="img-placeholder">[Product image: Shoevera pair, front and side]</div>
+        </div>
+        <div class="showcase-details">
+          <h3>Quality you can rely on</h3>
+          <p>Strong, waterproof material that resists tears and wear. Easy to clean—wipe or rinse and air dry. Compact enough to keep in your bag or on your boda.</p>
+          <p class="showcase-price">Affordable, student-friendly pricing <span>(contact for current price)</span></p>
+          <a href="https://wa.me/256XXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20Shoevera" class="btn btn-primary btn-whatsapp" target="_blank" rel="noopener">Order on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SOCIAL PROOF -->
+  <section class="social-proof alt">
+    <div class="container">
+      <h2>Used by People Who Walk Through Rain Every Day</h2>
+      <p class="social-proof-tagline">Students, commuters, and workers across Uganda are keeping their shoes dry with Shoevera.</p>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p class="testimonial-quote">"I don’t worry about mud on the way to campus anymore. I just slip on Shoevera and my shoes stay clean."</p>
+          <div class="testimonial-author">— Student, Kampala</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-quote">"As a boda rider, I need something quick. Shoevera goes on and off in seconds. Worth every shilling."</p>
+          <div class="testimonial-author">— Boda boda rider</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-quote">"Office shoes used to get ruined every rainy season. Now I wear Shoevera to the office gate and take it off. Simple."</p>
+          <div class="testimonial-author">— Office worker</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. HOW TO BUY -->
+  <section class="how-to-buy">
+    <div class="container">
+      <h2>How to Buy</h2>
+      <p class="how-to-buy-intro">Order in three simple steps. Fast ordering and support when you need it.</p>
+      <div class="buy-steps">
+        <div class="buy-step">
+          <span class="buy-step-num">1</span>
+          <p>Choose your size</p>
+        </div>
+        <div class="buy-step">
+          <span class="buy-step-num">2</span>
+          <p>Order via WhatsApp or online</p>
+        </div>
+        <div class="buy-step">
+          <span class="buy-step-num">3</span>
+          <p>Get it delivered</p>
+        </div>
+      </div>
+      <div class="cta-wrap">
+        <a href="https://wa.me/256XXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20Shoevera" class="btn btn-primary btn-whatsapp" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Don’t Let Rain Ruin Your Shoes</h2>
+      <p>Get Shoevera today and keep your shoes dry and clean all rainy season. Order now—we’re here to help.</p>
+      <a href="https://wa.me/256XXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20Shoevera" class="btn btn-whatsapp" target="_blank" rel="noopener">Order on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section class="faq alt">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <p class="faq-intro">Quick answers to common questions about Shoevera.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Does it fit all shoe types?</div>
+          <p class="faq-a">Shoevera is designed to fit a range of everyday shoes—school shoes, office shoes, and casual footwear. Check our size guide when you order.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it reusable?</div>
+          <p class="faq-a">Yes. Shoevera is made to be used again and again. After use, wipe or rinse and air dry—then pack away for the next rainy day.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it waterproof?</div>
+          <p class="faq-a">Yes. The material is waterproof so your shoes and feet stay dry in rain and puddles.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I clean it?</div>
+          <p class="faq-a">Wipe with a damp cloth or rinse with water. Air dry before storing. No special cleaning needed.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it suitable for school or office shoes?</div>
+          <p class="faq-a">Absolutely. Many students and office workers use Shoevera to protect their formal or school shoes on the way to campus or work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-brand">Shoevera</div>
+      <div class="footer-links">
+        <a href="https://wa.me/256XXXXXXXXX">WhatsApp</a>
+        <a href="tel:+256XXXXXXXXX">Phone</a>
+        <a href="mailto:hello@shoevera.com">Email</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://instagram.com/shoevera" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+        <a href="https://tiktok.com/@shoevera" aria-label="TikTok" target="_blank" rel="noopener">♪</a>
+        <a href="https://facebook.com/shoevera" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+        <a href="https://wa.me/256XXXXXXXXX" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+      </div>
+      <p class="footer-copy">© 2025 Shoevera. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
