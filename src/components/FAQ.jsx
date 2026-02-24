@@ -3,11 +3,11 @@ import { useState } from 'react'
 const items = [
   {
     q: 'Does it fit all shoe types?',
-    a: 'Shoevera is designed to fit a range of everyday shoes—school shoes, office shoes, and casual footwear. Check our size guide when you order.',
+    a: 'Shoevera is designed to fit a range of everyday shoes; school shoes, office shoes, and casual footwear. Check our size guide when you order.',
   },
   {
     q: 'Is it reusable?',
-    a: 'Yes. Shoevera is made to be used again and again. After use, wipe or rinse and air dry—then pack away for the next rainy day.',
+    a: 'Yes. Shoevera is made to be used again and again. After use, wipe or rinse and air dry; then pack away for the next rainy day.',
   },
   {
     q: 'Is it waterproof?',

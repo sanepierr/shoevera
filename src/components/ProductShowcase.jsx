@@ -8,9 +8,10 @@ export default function ProductShowcase({ productImage }) {
   return (
     <section className="showcase" id="product">
       <div className="container">
+        <p className="section-eyebrow">The product</p>
         <h2>Built for Everyday Use</h2>
         <p className="showcase-intro">
-          Lightweight, durable materials and a simple design—so you can focus on your day, not on your shoes.
+          Lightweight, durable materials and a simple design; so you can focus on your day, not on your shoes.
         </p>
         <div className="showcase-main">
           <div className="showcase-image">
@@ -25,7 +26,7 @@ export default function ProductShowcase({ productImage }) {
           <div className="showcase-details">
             <h3>Quality you can rely on</h3>
             <p>
-              Strong, waterproof material that resists tears and wear. Easy to clean—wipe or rinse and air dry. Compact enough to keep in your bag or on your boda.
+              Strong, waterproof material that resists tears and wear. Easy to clean; wipe or rinse and air dry. Compact enough to keep in your bag or on your boda.
             </p>
             <p className="showcase-price">
               Affordable, student-friendly pricing <span>(contact for current price)</span>

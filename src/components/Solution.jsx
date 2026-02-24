@@ -1,4 +1,4 @@
-export default function Solution() {
+export default function Solution({ howToUseImage }) {
   const steps = [
     {
       num: 1,
@@ -8,7 +8,7 @@ export default function Solution() {
     {
       num: 2,
       title: 'Walk with confidence',
-      text: 'Your shoes stay dry and clean. Easy to walk in—no bulk, no hassle.',
+      text: 'Your shoes stay dry and clean. Easy to walk in; no bulk, no hassle.',
     },
     {
       num: 3,
@@ -21,8 +21,13 @@ export default function Solution() {
       <div className="container">
         <h2>Meet Shoevera</h2>
         <p className="solution-intro">
-          A lightweight cover you wear over your existing shoes. Slip it on when it rains or the path is dirty—take it off when you’re inside. That’s it.
+          A lightweight cover you wear over your existing shoes. Slip it on when it rains or the path is dirty; take it off when you’re inside. That’s it.
         </p>
+        {howToUseImage && (
+          <div className="solution-visual">
+            <img src={howToUseImage} alt="How to put on Shoevera shoe covers" />
+          </div>
+        )}
         <div className="solution-steps">
           {steps.map((step) => (
             <div key={step.num} className="step">

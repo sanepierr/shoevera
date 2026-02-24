@@ -10,9 +10,10 @@ import CTA from './components/CTA'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 
-// Images: use files in public/ (e.g. /hero.jpg, /product.jpg) or leave null for placeholders
-const heroImage = '/hero.jpg'
-const productImage = '/product.jpg'
+// Images in public/: hero.png, hero.jpg, product.png, product.jpg, how-to-use.png — swap paths to try different visuals
+const heroImage = '/hero.png'
+const productImage = '/product.png'
+const howToUseImage = '/how-to-use.png'
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
       <Navbar />
       <Hero heroImage={heroImage} />
       <Problem />
-      <Solution />
+      <Solution howToUseImage={howToUseImage} />
       <Benefits />
       <ProductShowcase productImage={productImage} />
       <SocialProof />

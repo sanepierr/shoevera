@@ -9,11 +9,12 @@ export default function Hero({ heroImage }) {
     <section className="hero">
       <div className="hero-container">
         <div className="hero-content">
+          <span className="hero-badge">Rainy season essential</span>
           <h1 className="hero-title">
             Reusable shoe covers for rain and mud.
           </h1>
           <p className="hero-sub">
-            Slip Shoevera over your shoes and keep them dry and clean—no more ruined office or school shoes when the path is wet.
+            Slip Shoevera over your shoes and keep them dry and clean; no more ruined office or school shoes when the path is wet.
           </p>
           <div className="hero-ctas">
             <a href={getWhatsAppUrl()} className="btn btn-primary btn-whatsapp" target="_blank" rel="noopener noreferrer">

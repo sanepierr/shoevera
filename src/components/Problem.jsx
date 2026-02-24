@@ -9,7 +9,7 @@ const items = [
   {
     icon: ProblemIcons.rain,
     title: 'Muddy roads & flooded paths',
-    text: 'Urban and peri-urban areas get waterlogged—your shoes take the hit every time.',
+    text: 'Urban and peri-urban areas get waterlogged; your shoes take the hit every time.',
   },
   {
     icon: ProblemIcons.boots,
@@ -24,7 +24,7 @@ export default function Problem() {
       <div className="container">
         <h2>Sound Familiar?</h2>
         <p className="problem-intro">
-          Rainy season and muddy roads make it tough to keep your shoes clean—and replacing them is expensive.
+          Rainy season and muddy roads make it tough to keep your shoes clean; and replacing them is expensive.
         </p>
         <div className="problem-grid">
           {items.map((item, i) => (
