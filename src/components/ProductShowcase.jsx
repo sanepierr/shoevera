@@ -11,7 +11,7 @@ export default function ProductShowcase({ productImage }) {
         <p className="section-eyebrow">The product</p>
         <h2>Built for Everyday Use</h2>
         <p className="showcase-intro">
-          Lightweight, durable materials and a simple design; so you can focus on your day, not on your shoes.
+          Lightweight, durable materials and a simple design; so you can focus on your day, not on your shoes. Waterproof, portable, and easy to clean.
         </p>
         <div className="showcase-main">
           <div className="showcase-image">

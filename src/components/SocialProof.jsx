@@ -22,7 +22,7 @@ export default function SocialProof() {
         </p>
         <div className="testimonials">
           {testimonials.map((t, i) => (
-            <div key={i} className="testimonial">
+            <div key={i} className="testimonial testimonial-block">
               <p className="testimonial-quote">"{t.quote}"</p>
               <div className="testimonial-author">{t.author}</div>
             </div>

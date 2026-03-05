@@ -6,6 +6,8 @@ export const EMAIL = 'hello@shoevera.com'
 export const INSTAGRAM_URL = 'https://www.instagram.com/shoevera.ug?igsh=YmYzNzlha2dsNXZp'
 export const TIKTOK_URL = 'https://www.tiktok.com/@shoevera_ug?lang=en-GB'
 export const FACEBOOK_URL = 'https://www.facebook.com/people/Shoeveraug/100069983687798/'
+// Optional: add your 9:16 demo video URL (e.g. from public/demo.mp4 or a hosted URL) to show the visual demo
+export const DEMO_VIDEO_URL = ''
 
 export function getWhatsAppUrl(text = WHATSAPP_MESSAGE) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`

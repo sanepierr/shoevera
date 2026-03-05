@@ -16,6 +16,11 @@ export default function Hero({ heroImage }) {
           <p className="hero-sub">
             Slip Shoevera over your shoes and keep them dry and clean; no more ruined office or school shoes when the path is wet.
           </p>
+          <ul className="hero-benefits">
+            <li>Waterproof & mud-resistant</li>
+            <li>Lightweight & portable</li>
+            <li>Easy to clean & reuse</li>
+          </ul>
           <div className="hero-ctas">
             <a href={getWhatsAppUrl()} className="btn btn-primary btn-whatsapp" target="_blank" rel="noopener noreferrer">
               Order on WhatsApp

@@ -31,8 +31,9 @@ export default function FAQ() {
   }
 
   return (
-    <section className="faq alt" id="faq">
+    <section className="faq alt faq-page" id="faq">
       <div className="container">
+        <p className="section-eyebrow">FAQ</p>
         <h2>Frequently Asked Questions</h2>
         <p className="faq-intro">Quick answers to common questions about Shoevera.</p>
         <div className="faq-list">

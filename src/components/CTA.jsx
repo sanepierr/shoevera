@@ -6,8 +6,13 @@ export default function CTA() {
       <div className="container">
         <h2>Don’t Let Rain Ruin Your Shoes</h2>
         <p>
-          Get Shoevera today and keep your shoes dry and clean all rainy season. Order now; we’re here to help.
+          Get Shoevera today and keep your shoes dry and clean all rainy season. Waterproof, portable, and easy to clean—order now; we’re here to help.
         </p>
+        <ul className="cta-benefits">
+          <li>Keeps shoes dry in rain and puddles</li>
+          <li>Slip on and off in seconds</li>
+          <li>Wipe or rinse; use again and again</li>
+        </ul>
         <a href={getWhatsAppUrl()} className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
           Order on WhatsApp
         </a>

@@ -4,11 +4,13 @@ import Problem from './components/Problem'
 import Solution from './components/Solution'
 import Benefits from './components/Benefits'
 import ProductShowcase from './components/ProductShowcase'
+import VideoDemo from './components/VideoDemo'
 import SocialProof from './components/SocialProof'
 import HowToBuy from './components/HowToBuy'
 import CTA from './components/CTA'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
+import { DEMO_VIDEO_URL } from './config'
 
 // Images in public/: hero.png, hero.jpg, product.png, product.jpg, how-to-use.png — swap paths to try different visuals
 const heroImage = '/hero.png'
@@ -24,6 +26,7 @@ export default function App() {
       <Solution howToUseImage={howToUseImage} />
       <Benefits />
       <ProductShowcase productImage={productImage} />
+      <VideoDemo videoSrc={DEMO_VIDEO_URL} />
       <SocialProof />
       <HowToBuy />
       <CTA />
