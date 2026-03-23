@@ -13,11 +13,11 @@ import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import { DEMO_VIDEO_URL } from './config'
 
-// Images in public/: hero.png, product.png, how-to-use.png, shoe.png (optional - for hover reveal default state)
-const heroImage = '/hero.png'
-const productImage = '/product.png'
-const howToUseImage = '/how-to-use.png'
-const shoeImage = '/shoe.png' // Add a shoe-only photo for hover reveal; fallback shows placeholder
+// Real assets from resources/ → copied to public/ — see public/ASSETS.md
+const heroImage = '/hero.jpg'
+const productImage = '/product.jpg'
+const howToUseImage = '/how-to-use.jpg'
+const shoeImage = '/shoe.jpg'
 
 export default function App() {
   return (

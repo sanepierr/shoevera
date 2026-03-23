@@ -12,3 +12,6 @@ dist/
 # Editor
 .DS_Store
 *.log
+
+# Raw iPhone videos in resources/ are huge; web copy is public/demo.mp4 (remove this line to track .MOV with Git LFS)
+resources/*.MOV

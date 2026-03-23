@@ -52,14 +52,20 @@ shoevera/
 │       ├── Solution.jsx
 │       ├── Benefits.jsx
 │       ├── ProductShowcase.jsx
+│       ├── ShoeRevealSection.jsx
+│       ├── VideoDemo.jsx
 │       ├── SocialProof.jsx
 │       ├── HowToBuy.jsx
 │       ├── CTA.jsx
 │       ├── FAQ.jsx
 │       └── Footer.jsx
 └── public/
-    ├── hero.jpg            # Hero image (included; replace with your own)
-    └── product.jpg         # Product image (included; replace with your own)
+    ├── ASSETS.md           # Which files are used + mapping from resources/
+    ├── hero.jpg            # Hero fallback + hover-reveal “after”
+    ├── product.jpg         # Product showcase
+    ├── how-to-use.jpg      # Solution section
+    ├── shoe.jpg            # Hover-reveal “before” (packaged)
+    └── demo.mp4            # Demo video (see config.js)
 ```
 
 ## Before launch
@@ -68,10 +74,9 @@ shoevera/
    - Set `WHATSAPP_NUMBER` (e.g. `256700123456`).
    - Set `PHONE`, `EMAIL`, and social URLs (Instagram, TikTok, Facebook).
 
-2. **Images**
-   - **Hero:** Replace `public/hero.jpg` with your own (person/shoes in rain or mud).
-   - **Product:** Replace `public/product.jpg` with your product shot.
-   - To use different filenames, update the `heroImage` and `productImage` constants in `src/App.jsx`.
+2. **Images & video (use your real photos)**
+   - See **`public/ASSETS.md`** for what each file should show and naming.
+   - Replace `hero.jpg`, `product.jpg`, `how-to-use.jpg`, `shoe.jpg`, and `demo.mp4` in `public/`, or change paths in `src/App.jsx` and `DEMO_VIDEO_URL` in `src/config.js`.
 
 3. **Static backup**
    - The original static HTML version is saved as `index-static-backup.html` if you need a non-React fallback.
@@ -91,8 +96,6 @@ shoevera/
 
 ## Using your own images
 
-- Place files in `public/` (e.g. `public/hero.jpg`, `public/my-product.png`).
-- In `src/App.jsx`, set:
-  - `heroImage = '/hero.jpg'` (or your filename)
-  - `productImage = '/my-product.png'`
-- If an image fails to load, the section falls back to a short placeholder message.
+- Prefer **real product photography** over AI — see **`public/ASSETS.md`**.
+- Place files in `public/` and match names in `src/App.jsx`, or update the constants there.
+- If an image fails to load, some sections show a placeholder.
