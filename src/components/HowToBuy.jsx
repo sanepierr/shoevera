@@ -1,5 +1,3 @@
-import { getWhatsAppUrl } from '../config'
-
 export default function HowToBuy() {
   const steps = ['Choose your size', 'Order via WhatsApp or online', 'Get it delivered']
   return (
@@ -16,11 +14,6 @@ export default function HowToBuy() {
               <p>{label}</p>
             </div>
           ))}
-        </div>
-        <div className="cta-wrap">
-          <a href={getWhatsAppUrl()} className="btn btn-primary btn-whatsapp" target="_blank" rel="noopener noreferrer">
-            Order on WhatsApp
-          </a>
         </div>
       </div>
     </section>

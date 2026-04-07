@@ -453,6 +453,10 @@ section.alt {
   flex-wrap: wrap;
   gap: 1rem;
 }
+.hero-premium-ctas.hero-premium-ctas-single {
+  justify-content: center;
+  margin-top: 1rem;
+}
 .btn-premium {
   display: inline-flex;
   align-items: center;
@@ -481,9 +485,10 @@ section.alt {
 .btn-premium-outline {
   display: inline-flex;
   align-items: center;
-  padding: 1rem 1.75rem;
+  justify-content: center;
+  padding: 1.05rem 2.25rem;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.05rem;
   border-radius: 999px;
   border: 2px solid var(--color-border);
   color: var(--color-text);
