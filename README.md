@@ -52,20 +52,19 @@ shoevera/
 │       ├── Solution.jsx
 │       ├── Benefits.jsx
 │       ├── ProductShowcase.jsx
-│       ├── ShoeRevealSection.jsx
-│       ├── VideoDemo.jsx
 │       ├── SocialProof.jsx
 │       ├── HowToBuy.jsx
 │       ├── CTA.jsx
 │       ├── FAQ.jsx
 │       └── Footer.jsx
 └── public/
-    ├── ASSETS.md           # Which files are used + mapping from resources/
-    ├── hero.jpg            # Hero fallback + hover-reveal “after”
-    ├── product.jpg         # Product showcase
-    ├── how-to-use.jpg      # Solution section
-    ├── shoe.jpg            # Hover-reveal “before” (packaged)
-    └── demo.mp4            # Demo video (see config.js)
+    ├── ASSETS.md           # Lists current filenames (Shoevera_here.png, videos, logo, etc.)
+    ├── Shoevera_here.png  # Hero (cutout-friendly styling in CSS)
+    ├── Shoevera_sample.png # Product showcase
+    ├── how-to-use.jpg      # Optional spare asset
+    ├── shoevera_logo.png   # Navbar (LOGO_URL in config.js)
+    ├── product_introduction_video.mp4
+    └── interview_video_with_boda_potential_customer.mp4
 ```
 
 ## Before launch
@@ -76,7 +75,7 @@ shoevera/
 
 2. **Images & video (use your real photos)**
    - See **`public/ASSETS.md`** for what each file should show and naming.
-   - Replace `hero.jpg`, `product.jpg`, `how-to-use.jpg`, `shoe.jpg`, and `demo.mp4` in `public/`, or change paths in `src/App.jsx` and `DEMO_VIDEO_URL` in `src/config.js`.
+   - See **`public/ASSETS.md`** and edit `src/App.jsx` / `src/config.js` if you rename files.
 
 3. **Static backup**
    - The original static HTML version is saved as `index-static-backup.html` if you need a non-React fallback.
@@ -85,10 +84,10 @@ shoevera/
 
 1. **Hero** — Headline, subheadline, primary/secondary CTAs, hero image  
 2. **Problem** — Dirty shoes, muddy roads, gumboots hassle  
-3. **Solution** — What Shoevera is, 3 steps (slip on → walk → remove & reuse)  
+3. **Solution (Meet Shoevera)** — Intro copy, product intro video (~70vw), 3 steps  
 4. **Benefits** — Waterproof, cost-effective, easy wear/carry, reusable, fits many shoes  
 5. **Product showcase** — Product image, copy, pricing note, WhatsApp CTA  
-6. **Social proof** — Testimonials (student, boda rider, office worker)  
+6. **Social proof** — Customer interview video (~70vw) + testimonials  
 7. **How to buy** — 3 steps + WhatsApp CTA  
 8. **CTA block** — “Don’t let rain ruin your shoes” + WhatsApp  
 9. **FAQ** — Fit, reusable, waterproof, cleaning, school/office  

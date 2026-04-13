@@ -1,5 +1,3 @@
-import { getWhatsAppUrl } from '../config'
-
 export default function CTA() {
   return (
     <section className="cta-section">
@@ -13,9 +11,6 @@ export default function CTA() {
           <li>Slip on and off in seconds</li>
           <li>Wipe or rinse; use again and again</li>
         </ul>
-        <a href={getWhatsAppUrl()} className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-          Order on WhatsApp
-        </a>
       </div>
     </section>
   )

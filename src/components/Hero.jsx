@@ -123,10 +123,10 @@ export default function Hero({ heroImage }) {
               </button>
             </div>
           ) : showImage ? (
-            <div className="hero-image-wrap">
+            <div className="hero-image-wrap hero-image-wrap--cutout">
               <img
                 src={heroImage}
-                alt="Shoevera reusable shoe cover in use"
+                alt="Shoevera reusable shoe covers"
                 onError={() => setImageError(true)}
               />
             </div>

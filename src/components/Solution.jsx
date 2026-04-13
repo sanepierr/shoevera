@@ -1,9 +1,24 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-export default function Solution({ howToUseImage }) {
+export default function Solution({ videoUrl = '' }) {
   const ref = useRef(null)
+  const videoRef = useRef(null)
+  const [videoMuted, setVideoMuted] = useState(true)
   const inView = useInView(ref, { once: true, margin: '-60px' })
+  const showVideo = videoUrl && videoUrl.trim() !== ''
+
+  const toggleMute = () => {
+    const v = videoRef.current
+    if (!v) return
+    const next = !videoMuted
+    setVideoMuted(next)
+    v.muted = next
+    if (!next) {
+      v.play().catch(() => {})
+    }
+  }
+
   const steps = [
     {
       num: 1,
@@ -22,8 +37,8 @@ export default function Solution({ howToUseImage }) {
     },
   ]
   return (
-    <section className="solution" id="how-it-works">
-      <div className="container" ref={ref}>
+    <section className="solution" id="how-it-works" ref={ref}>
+      <div className="container">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -39,16 +54,56 @@ export default function Solution({ howToUseImage }) {
         >
           A lightweight cover you wear over your existing shoes. Slip it on when it rains or the path is dirty; take it off when you’re inside. That’s it.
         </motion.p>
-        {howToUseImage && (
-          <motion.div
-            className="solution-visual"
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.15 }}
-          >
-            <img src={howToUseImage} alt="How to put on Shoevera shoe covers" />
-          </motion.div>
-        )}
+      </div>
+      {showVideo && (
+        <motion.div
+          className="section-video-fullbleed"
+          initial={{ opacity: 0, y: 24 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.55, delay: 0.12 }}
+        >
+          <div className="section-video-fullbleed-inner">
+            <video
+              ref={videoRef}
+              src={videoUrl}
+              controls
+              playsInline
+              muted={videoMuted}
+              className="section-fullwidth-video"
+              aria-label="Shoevera product introduction"
+            >
+              Your browser does not support the video tag.
+            </video>
+            <button
+              type="button"
+              className="hero-video-sound-btn video-demo-sound-btn section-video-sound-btn"
+              onClick={toggleMute}
+              aria-pressed={!videoMuted}
+              aria-label={videoMuted ? 'Unmute video' : 'Mute video'}
+            >
+              {videoMuted ? (
+                <>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <line x1="23" y1="9" x2="17" y2="15" />
+                    <line x1="17" y1="9" x2="23" y2="15" />
+                  </svg>
+                  <span>Sound on</span>
+                </>
+              ) : (
+                <>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+                  </svg>
+                  <span>Mute</span>
+                </>
+              )}
+            </button>
+          </div>
+        </motion.div>
+      )}
+      <div className="container">
         <motion.div
           className="solution-steps"
           initial="hidden"

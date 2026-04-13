@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { getWhatsAppUrl } from '../config'
+import { getWhatsAppUrl, LOGO_URL } from '../config'
 
 const navLinks = [
   { label: 'How it works', href: '#how-it-works' },
   { label: 'Benefits', href: '#benefits' },
   { label: 'Product', href: '#product' },
-  { label: 'Watch', href: '#demo' },
+  { label: 'Watch', href: '#how-it-works' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'How to buy', href: '#how-to-buy' },
   { label: 'FAQ', href: '#faq' },
@@ -30,8 +30,11 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="navbar-premium-inner">
-        <a href="#" className="navbar-premium-logo">
-          <span className="navbar-logo-text">SHOEVERA</span>
+        <a href="#" className="navbar-premium-logo" aria-label="Shoevera home">
+          {LOGO_URL ? (
+            <img src={LOGO_URL} alt="" className="navbar-logo-img" />
+          ) : null}
+          <span className="navbar-brand-title">Shoevera</span>
         </a>
 
         <button

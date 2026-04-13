@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { getWhatsAppUrl } from '../config'
 
 export default function ProductShowcase({ productImage }) {
   const [imageError, setImageError] = useState(false)
@@ -40,12 +39,26 @@ export default function ProductShowcase({ productImage }) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="showcase-image">
+          <div className="showcase-visual">
             {showImage ? (
-              <img src={productImage} alt="Shoevera product" onError={() => setImageError(true)} />
+              <div className="showcase-cluster">
+                <div className="showcase-cluster__hero">
+                  <img
+                    src={productImage}
+                    alt="Shoevera product"
+                    onError={() => setImageError(true)}
+                  />
+                </div>
+                <div className="showcase-cluster__tile showcase-cluster__tile--a" aria-hidden>
+                  <img src={productImage} alt="" />
+                </div>
+                <div className="showcase-cluster__tile showcase-cluster__tile--b" aria-hidden>
+                  <img src={productImage} alt="" />
+                </div>
+              </div>
             ) : (
-              <div className="img-placeholder">
-                Add <code>public/product.jpg</code> or your own product photo
+              <div className="showcase-cluster-placeholder img-placeholder">
+                Add <code>public/Shoevera_sample.png</code> or your own product photo
               </div>
             )}
           </div>
@@ -54,12 +67,6 @@ export default function ProductShowcase({ productImage }) {
             <p>
               Strong, waterproof material that resists tears and wear. Easy to clean; wipe or rinse and air dry. Compact enough to keep in your bag or on your boda.
             </p>
-            <p className="showcase-price">
-              Affordable, student-friendly pricing <span>(contact for current price)</span>
-            </p>
-            <a href={getWhatsAppUrl()} className="btn btn-primary btn-whatsapp" target="_blank" rel="noopener noreferrer">
-              Order on WhatsApp
-            </a>
           </div>
         </motion.div>
       </div>

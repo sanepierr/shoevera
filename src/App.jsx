@@ -4,20 +4,16 @@ import Problem from './components/Problem'
 import Solution from './components/Solution'
 import Benefits from './components/Benefits'
 import ProductShowcase from './components/ProductShowcase'
-import ShoeRevealSection from './components/ShoeRevealSection'
-import VideoDemo from './components/VideoDemo'
 import SocialProof from './components/SocialProof'
 import HowToBuy from './components/HowToBuy'
 import CTA from './components/CTA'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
-import { DEMO_VIDEO_URL } from './config'
+import { MEET_SHOEVERA_VIDEO_URL, REVIEWS_INTERVIEW_VIDEO_URL } from './config'
 
-// Real assets from resources/ → copied to public/ — see public/ASSETS.md
-const heroImage = '/hero.jpg'
-const productImage = '/product.jpg'
-const howToUseImage = '/how-to-use.jpg'
-const shoeImage = '/shoe.jpg'
+// See public/ASSETS.md — filenames match your uploads in public/
+const heroImage = '/Shoevera_here.png'
+const productImage = '/Shoevera_sample.png'
 
 export default function App() {
   return (
@@ -25,15 +21,10 @@ export default function App() {
       <Navbar />
       <Hero heroImage={heroImage} />
       <Problem />
-      <Solution howToUseImage={howToUseImage} />
+      <Solution videoUrl={MEET_SHOEVERA_VIDEO_URL} />
       <Benefits />
       <ProductShowcase productImage={productImage} />
-      <ShoeRevealSection
-        shoeImage={shoeImage}
-        shoeWithShoeveraImage={heroImage}
-      />
-      <VideoDemo videoSrc={DEMO_VIDEO_URL} />
-      <SocialProof />
+      <SocialProof reviewVideoUrl={REVIEWS_INTERVIEW_VIDEO_URL} />
       <HowToBuy />
       <CTA />
       <FAQ />
