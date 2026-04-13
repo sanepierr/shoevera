@@ -14,6 +14,22 @@ export const MEET_SHOEVERA_VIDEO_URL = '/product_introduction_video.mp4'
 export const REVIEWS_INTERVIEW_VIDEO_URL = '/interview_video_with_boda_potential_customer.mp4'
 // Navbar (and optional footer) brand mark
 export const LOGO_URL = '/shoevera_logo.png'
+// Optional: Vite env — Mailchimp/Brevo “form action” POST URL so signups hit your list (see .env.example).
+export const NEWSLETTER_FORM_ACTION =
+  typeof import.meta !== 'undefined' && import.meta.env?.VITE_NEWSLETTER_FORM_ACTION
+    ? String(import.meta.env.VITE_NEWSLETTER_FORM_ACTION).trim()
+    : ''
+// Same-origin POST sends welcome email via Resend (Vercel `api/subscribe` or Vite dev middleware). Override if needed.
+const _newsletterApiExplicit =
+  typeof import.meta !== 'undefined' && import.meta.env?.VITE_NEWSLETTER_API_URL != null
+    ? String(import.meta.env.VITE_NEWSLETTER_API_URL).trim()
+    : ''
+export const NEWSLETTER_API_URL =
+  typeof import.meta !== 'undefined'
+    ? _newsletterApiExplicit !== ''
+      ? _newsletterApiExplicit
+      : '/api/subscribe'
+    : ''
 
 export function getWhatsAppUrl(text = WHATSAPP_MESSAGE) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`

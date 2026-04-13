@@ -65,12 +65,20 @@ export default function Hero({ heroImage }) {
             <li>Easy to clean & reuse</li>
           </motion.ul>
           <motion.div
-            className="hero-premium-ctas hero-premium-ctas-single"
+            className="hero-premium-ctas"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <a href="#how-it-works" className="btn btn-premium-outline">
+            <a
+              href={getWhatsAppUrl()}
+              className="btn-premium btn-premium-glow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Order now
+            </a>
+            <a href="#how-it-works" className="btn-premium-outline">
               See how it works
             </a>
           </motion.div>
