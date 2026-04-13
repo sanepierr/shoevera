@@ -4,14 +4,27 @@ node_modules/
 # Build output
 dist/
 
-# Local env
+# Local env and secrets (never commit — use .env.example as a template only)
 .env
 .env.local
 .env.*.local
+*.pem
+*.p8
+*.key
 
-# Editor
-.DS_Store
+# Logs and debug
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vercel CLI (linked project metadata; optional to ignore)
+.vercel
 
 # Raw iPhone videos in resources/ are huge; web copy is public/demo.mp4 (remove this line to track .MOV with Git LFS)
 resources/*.MOV
